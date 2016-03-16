@@ -35,12 +35,20 @@
 			</tr>
 				<tr>
 				<td>Name: </td>
-				<td><form:select path="name">
-						<form:option value="" label="...." />
-						<form:options items="${nameList}" />
-					</form:select></td>
-				<td><form:errors path="name" cssClass="error" /></td>
-			</tr>
+					<td><form:select path="name">
+							<form:option value="" label="...." />
+							<form:options items="${nameList}" />
+						</form:select></td>
+					<td><form:errors path="name" cssClass="error" /></td>
+				</tr>
+				
+				<tr>
+					<td>ID: </td>
+					<td>
+						<form:input path="ID"/>
+					</td>
+				</tr>
+				
 			
 			<tr>
 				<td></td>

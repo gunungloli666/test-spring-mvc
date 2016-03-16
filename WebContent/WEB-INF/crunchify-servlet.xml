@@ -26,6 +26,11 @@
 		 <property name="suffix" value=".jsp"/>
 		 	<property name="order" value="2" />
  	</bean>
+ 	
+ 	
+ 	<mvc:resources mapping="/resources/**" location="/resources/core/"  
+	cache-period="31556926"/>
+ 	
 
  
 </beans>

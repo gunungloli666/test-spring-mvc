@@ -8,6 +8,7 @@
 </head>
 <body>	
 Country Selected: ${db.country} <br/>
-Name Selected: ${db.name} 
+Name Selected: ${db.name} <br/>
+ID selected: ${db.ID} <br/>
 </body>
 </html>

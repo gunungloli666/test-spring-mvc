@@ -5,8 +5,20 @@ public class DropdownBean
 {
 	@NotEmpty
 	String country;
+
 	String name; 
 	
+	String ID ;
+	
+	
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
 	public String getName() {
 		return name;
 	}

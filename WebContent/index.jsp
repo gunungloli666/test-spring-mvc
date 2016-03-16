@@ -13,6 +13,9 @@
   <tr>
     <td> <a href="DropdownExample.html">Link Belajar 2</a></td>
   </tr>
+   <tr>
+    <td> <a href="wellcome2.html">Link Belajar 3: Tentang Ajax</a></td>
+  </tr>
 </table>
 </body>
 </html>
