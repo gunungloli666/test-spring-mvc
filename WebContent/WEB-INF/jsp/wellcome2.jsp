@@ -9,14 +9,15 @@
 <c:url var="home" value="/" scope="request" />
 
 <spring:url value="/resources/css/hello.css" var="coreCss" />
-<spring:url value="/resources/css/bootstrap.min.css"
-	var="bootstrapCss" />
+<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss" />
+		
 <link href="${bootstrapCss}" rel="stylesheet" />
 <link href="${coreCss}" rel="stylesheet" />
 
 <spring:url value="/resources/js/jquery.1.10.2.min.js"
 	var="jqueryJs" />
 <script src="${jqueryJs}"></script>
+
 </head>
 
 <nav class="navbar navbar-inverse">
@@ -71,17 +72,12 @@
 
 <script>
 	jQuery(document).ready(function($) {
-
 		$("#search-form").submit(function(event) {
-
 			// Disble the search button
 			enableSearchButton(false);
-
 			// Prevent the form from submitting via the browser.
 			event.preventDefault();
-
 			searchViaAjax();
-
 		});
 
 	});
@@ -116,7 +112,7 @@
 	}
 
 	function enableSearchButton(flag) {
-		$("#btn-search").prop("disabled", flag);
+		$("#btn-search").prop("disabled", flag );
 	}
 
 	function display(data) {
@@ -124,6 +120,7 @@
 				+ JSON.stringify(data, null, 4) + "</pre>";
 		$('#feedback').html(json);
 	}
+	
 </script>
 
 </body>
