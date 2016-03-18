@@ -25,8 +25,7 @@ public class FileUploadController {
      * Upload single file using Spring Controller
      */
     @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
-    public @ResponseBody
-    String uploadFileHandler(@RequestParam("name") String name,
+    public @ResponseBody String uploadFileHandler(@RequestParam("name") String name,
             @RequestParam("file") MultipartFile file) {
  
         if (!file.isEmpty()) {
@@ -34,7 +33,8 @@ public class FileUploadController {
                 byte[] bytes = file.getBytes();
  
                 // Creating the directory to store file
-                String rootPath = System.getProperty("catalina.home");
+//                String rootPath = System.getProperty("catalina.home");
+                String rootPath = "D:/test/upload"; 
                 File dir = new File(rootPath + File.separator + "tmpFiles");
                 if (!dir.exists())
                     dir.mkdirs();
