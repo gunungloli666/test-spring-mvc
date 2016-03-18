@@ -27,10 +27,13 @@
 		 	<property name="order" value="2" />
  	</bean>
  	
- 	
  	<mvc:resources mapping="/resources/**" location="/resources/core/"  
 	cache-period="31556926"/>
- 	
+	
+	  <bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+         <!-- setting maximum upload size -->
+        <property name="maxUploadSize" value="100000" />
+    </bean>
 
- 
 </beans>

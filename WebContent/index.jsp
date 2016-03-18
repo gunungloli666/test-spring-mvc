@@ -16,6 +16,10 @@
    <tr>
     <td> <a href="wellcome2.html">Link Belajar 3: Tentang Ajax</a></td>
   </tr>
+  <tr>
+  	<td><a href="upload.html">Upload File</a></td>
+  	
+  </tr>
 </table>
 </body>
 </html>

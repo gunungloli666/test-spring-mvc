@@ -1,6 +1,7 @@
 <%@page session="false"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,7 @@
 				</div>
 			</div>
 			<div class="form-group form-group-lg">
-				<label class="col-sm-2 control-label">Email</label>
+				<label class="col-sm-2 control-label" >Email</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="email">
 				</div>
