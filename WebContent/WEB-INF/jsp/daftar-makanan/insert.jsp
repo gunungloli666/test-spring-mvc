@@ -13,12 +13,17 @@
 		<table>
 
 			<tr>
-				
+				<td>Nama Pelanggan</td>
 			</tr>
 
 			<tr>
-
+				
 			</tr>
+			
+			<tr>
+				
+			</tr>
+			
 		</table>
 	</form>
 

@@ -11,6 +11,7 @@
 		<hibernate.version>4.2.1.Final</hibernate.version>
 		<spring.version>4.1.1.RELEASE</spring.version>
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+		<jsp.version>2.2</jsp.version>
 	</properties>	
 	
 	
@@ -54,6 +55,13 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
  
 		<dependency>
 			<groupId>commons-logging</groupId>
