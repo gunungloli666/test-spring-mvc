@@ -11,9 +11,12 @@
 
 <spring:url value="/resources/css/hello.css" var="coreCss" />
 <spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss" />
-		
 <link href="${bootstrapCss}" rel="stylesheet" />
 <link href="${coreCss}" rel="stylesheet" />
+
+<!--  <link href="/resources/css/bootstrap.min.css" rel="stylesheet" /> -->
+<!--  <link href="/resources/css/hello.css" rel="stylesheet" /> -->
+ 
 
 <spring:url value="/resources/js/jquery.1.10.2.min.js"
 	var="jqueryJs" />

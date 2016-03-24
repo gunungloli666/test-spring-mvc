@@ -2,13 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/taglibs/customTaglib.tld"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.min.css" />
+
+
+<spring:url value="/resources/css/bootstrap.css" var="bootStrap"></spring:url>
+<spring:url value="/resources/css/bootstrap.min.css" var="bootStrapMin"></spring:url>
+<spring:url value="/resources/css/font-awesome.min.css" var="fontAwesome"></spring:url>
+
+<spring:url value="/resources/js/jquery.js" var="jqueryJs"></spring:url>
+<spring:url value="/resources/js/bootstrap.min.js" var="boostrapMinJs"></spring:url>
+
+
+<link rel="stylesheet" type="text/css" href="${bootStrap}" />
+<link rel="stylesheet" type="text/css" href="${bootStrapMin}" />
+<link rel="stylesheet" type="text/css" href="${fontAwesome}" />
+
 <title>Mohammad Fajar</title>
 </head>
 <body>
@@ -91,9 +103,8 @@
 		<tag:paginate max="15" offset="${offset}" count="${count}"
 			uri="/CrunchifySpringMVCTutorial/person/list" next="&raquo;" previous="&laquo;" />
 	</div>
-
-
-	<script type="text/javascript" src="/resources/js/jquery.js"></script>
-	<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="${jqueryJs}"></script>
+	<script type="text/javascript" src="${bootstrapMinJs}"></script>
 </body>
 </html>
