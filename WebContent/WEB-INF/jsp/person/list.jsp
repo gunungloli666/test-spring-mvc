@@ -9,10 +9,10 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.min.css" />
-<title>| Ekiras</title>
+<title>Mohammad Fajar</title>
 </head>
 <body>
-	<!-- <nav class="navbar navbar-default">
+ <!-- <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		Brand and toggle get grouped for better mobile display
 		<div class="navbar-header">
@@ -83,17 +83,17 @@
 			<c:forEach items="${persons}" var="person" varStatus="itr">
 				<tr>
 					<td>${offset + itr.index +1 }</td>
-					<td>${person.name }</td>
-					<td>${person.age }</td>
+					<td>${person.name}</td>
+					<td>${person.age}</td>
 				</tr>
 			</c:forEach>
 		</table>
 		<tag:paginate max="15" offset="${offset}" count="${count}"
-			uri="/person/list" next="&raquo;" previous="&laquo;" />
+			uri="/CrunchifySpringMVCTutorial/person/list" next="&raquo;" previous="&laquo;" />
 	</div>
 
 
-	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery.js"></script>
+	<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
 </body>
 </html>
