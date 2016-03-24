@@ -1,4 +1,4 @@
-package com.crunchify.controller.dbtest;
+package com.crunchify.controller.dbtest.makanan;
 public interface StockBo {
 	
 	void save(Stock stock);

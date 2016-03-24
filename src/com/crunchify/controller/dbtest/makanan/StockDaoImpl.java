@@ -1,4 +1,4 @@
-package com.crunchify.controller.dbtest;
+package com.crunchify.controller.dbtest.makanan;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import java.util.List;

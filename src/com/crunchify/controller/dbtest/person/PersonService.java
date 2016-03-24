@@ -19,6 +19,10 @@ public class PersonService {
 		return personDAO.list(offset, maxResults);
 	}
 	
+	public List<Person> list(){
+		return personDAO.list(); 
+	}
+	
 	public Long count(){
 		return personDAO.count();
 	}

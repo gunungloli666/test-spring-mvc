@@ -22,6 +22,14 @@ public class PersonController {
 		return "/person/list";
 	}
 	
+	
+	@RequestMapping(value="/full-list")
+	public String fullList(Model model){
+		model.addAttribute("persons", personService.list());
+		model.addAttribute("count", personService.count());
+		return "/person/full-list"; 
+	}
+	
 	@RequestMapping(value="/save")
 	public String save(){
 		personService.save();

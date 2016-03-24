@@ -28,8 +28,19 @@ public class PersonDAO {
 	}
 	
 	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Person> list(){
+		List<Person> plist = sessionFactory.openSession()
+				.createCriteria(Person.class)
+				.list();
+//		 System.out.println("size size: "+ plist.size()); 
+		return plist; 
+	}
+	
+	
 	public Long count(){
-		return (Long)sessionFactory.openSession()
+		return (Long) sessionFactory.openSession()
 				.createCriteria(Person.class)
 				.setProjection(Projections.rowCount())
 				.uniqueResult();
