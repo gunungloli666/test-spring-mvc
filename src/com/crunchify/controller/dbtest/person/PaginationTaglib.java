@@ -7,6 +7,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class PaginationTaglib extends SimpleTagSupport {
+	
 	private String uri;
 	private int offset;
 	private int count;
