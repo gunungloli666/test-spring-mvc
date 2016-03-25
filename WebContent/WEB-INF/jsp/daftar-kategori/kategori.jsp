@@ -17,12 +17,28 @@
 <script src="${jqueryJs}"></script>
 
 
+<%-- <spring:url value="/resources/css/bootstrap.css" var="bootStrap"></spring:url> --%>
+<%-- <spring:url value="/resources/css/bootstrap.min.css" var="bootStrapMin"></spring:url> --%>
+<%-- <spring:url value="/resources/css/font-awesome.min.css" var="fontAwesome"></spring:url> --%>
+
+<%-- <spring:url value="/resources/js/jquery.js" var="jqueryJs"></spring:url> --%>
+<%-- <spring:url value="/resources/js/bootstrap.min.js" var="boostrapMinJs"></spring:url> --%>
+
+
+<%-- <link rel="stylesheet" type="text/css" href="${bootStrap}" /> --%>
+<%-- <link rel="stylesheet" type="text/css" href="${bootStrapMin}" /> --%>
+<%-- <link rel="stylesheet" type="text/css" href="${fontAwesome}" /> --%>
+
 <title>Contoh Dropdown Ajax</title>
 </head>
 <body>
 
 	<table>
 		<tr>
+			<td>
+				Daftar Kategori
+			</td>
+		
 			<td><select class="select-width" id="category_list_d">
 					<option value="">Select Category</option>
 					<c:forEach var="catList" items="${category_list}">
@@ -30,6 +46,12 @@
 					</c:forEach>
 			</select>
 			</td>
+			
+		</tr>
+		
+		
+		<tr>	
+			<td>Daftar Produk</td> 
 
 			<td><select class="select-width" id="product_list_d">
 					<option value="">Select Product</option>
@@ -42,7 +64,6 @@
 	<script type="text/javascript">
 	$().ready(
 			 function() {
-
 			  $('#category_list_d').change(
 			    function() {
 			     $.getJSON('${findProfuctForCategory}', {
@@ -65,6 +86,9 @@
 			});
 	
 	</script>
+
+<%-- 	<script type="text/javascript" src="${jqueryJs}"></script> --%>
+<%-- 	<script type="text/javascript" src="${bootstrapMinJs}"></script> --%>
 	
 </body>
 </html>
