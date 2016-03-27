@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
  
  
 @Controller
-@RequestMapping("/")
 @SessionAttributes("roles")
 public class AppController {
  
@@ -36,6 +35,7 @@ public class AppController {
     public String listUsers(ModelMap model) {
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
+       
         return "/crud/userlist";
     }
  
@@ -47,6 +47,8 @@ public class AppController {
         User user = new User();
         model.addAttribute("user", user);
         model.addAttribute("edit", false);
+        System.out.println("method get called") ;
+        
         return "/crud/registration";
     }
  
@@ -57,6 +59,8 @@ public class AppController {
     @RequestMapping(value = { "/crud/newuser" }, method = RequestMethod.POST)
     public String saveUser(@Valid User user, BindingResult result,
             ModelMap model) {
+    	 System.out.println("method post called") ;
+    	
         if (result.hasErrors()) {
             return "/crud/registration";
         }
@@ -76,6 +80,7 @@ public class AppController {
             result.addError(ssoError);
             return "/crud/registration";
         }
+        System.out.println("save user"); 
         userService.saveUser(user);
         model.addAttribute("success", "User " + user.getFirstName() 
         		+ " "+ user.getLastName() + " registered successfully");
@@ -92,7 +97,7 @@ public class AppController {
         User user = userService.findBySSO(ssoId);
         model.addAttribute("user", user);
         model.addAttribute("edit", true);
-        return "registration";
+        return "/crud/registration";
     }
      
     /**
@@ -118,7 +123,8 @@ public class AppController {
  
         userService.updateUser(user);
  
-        model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " updated successfully");
+        model.addAttribute("success", "User " + user.getFirstName() + " "+ 
+        			user.getLastName() + " updated successfully");
         return "/crud/registrationsuccess";
     }
  

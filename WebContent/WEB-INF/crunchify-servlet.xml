@@ -22,7 +22,7 @@
  
  
 	<context:component-scan base-package="com.crunchify.controller" />
- 	<mvc:annotation-driven/>
+<!--  	<mvc:annotation-driven/> -->
  	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -75,5 +75,18 @@
 		</property>
 	</bean>
 	
+	
+	<!-- converter untuk test crud-->
+	<mvc:annotation-driven conversion-service="conversionService"/>
+ 
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean id="roleToUserProfile"
+					class="com.crunchify.controller.dbtest.crud.RoleToUserProfileConverter" />
+			</list>
+		</property>
+	</bean>
 		
 </beans>

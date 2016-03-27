@@ -48,7 +48,6 @@ public class User {
     @JoinTable(name = "app_user_user_profile", 
              joinColumns = { @JoinColumn(name = "user_id") }, 
              inverseJoinColumns = { @JoinColumn(name = "user_profile_id")})
-    
     private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
 
 	public Integer getId() {
@@ -139,12 +138,12 @@ public class User {
         return true;
     }
  
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
-                + ", firstName=" + firstName + ", lastName=" + lastName
-                + ", email=" + email + "]";
-    }
+//    @Override
+//    public String toString() {
+//        return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
+//                + ", firstName=" + firstName + ", lastName=" + lastName
+//                + ", email=" + email + "]";
+//    }
 
 
 }

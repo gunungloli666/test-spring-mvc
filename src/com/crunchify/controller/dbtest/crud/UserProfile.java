@@ -16,7 +16,7 @@ public class UserProfile {
 	private Integer id;
 
 	@Column(name = "TYPE", length = 15, unique = true, nullable = false)
-	private String type = UserProfileType.USER.getUserProfileType();
+	private String type = UserProfileType.User.getUserProfileType();
 
 	public Integer getId() {
 		return id;
@@ -66,9 +66,9 @@ public class UserProfile {
         return true;
     }
  
-    @Override
-    public String toString() {
-        return "UserProfile [id=" + id + ", type=" + type + "]";
-    }
+//    @Override
+//    public String toString() {
+//        return "UserProfile[id=" + id + ", type=" + type + "]";
+//    }
 	
 }

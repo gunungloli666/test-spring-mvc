@@ -1,8 +1,12 @@
 package com.crunchify.controller.dbtest.crud;
 public enum UserProfileType {
-    USER("USER"),
-    DBA("DBA"),
-    ADMIN("ADMIN");
+	
+	User("User"), 
+    Bankir("Bankir"),
+    Petani("Petani"),
+    Penjahit("Penjahit"),
+	Professor("Professor");
+	
      
     String userProfileType;
      
