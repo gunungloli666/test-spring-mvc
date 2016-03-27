@@ -10,16 +10,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Daftar employee</h2>
+
+	<div>
+		<div><h2>Daftar employee</h2></div> 
+	</div>
+	
 	<table>
+
+		<tr>
+			<td><a href="<c:url value="/employee/insert" />"> <input
+					type="submit" value="Insert User" />
+			</a></td>
+		</tr>
+
+
 		<c:forEach items="${employees}" var="emps">
 			<tr>
-<%-- 				<td>${emps.id}</td> --%>
+				<td>${emps.id}</td>
 				<td>${emps.firstName}</td>
 				<td>${emps.lastName}</td>
 				<td>${emps.email}</td>
 			</tr>
 		</c:forEach>
+		
+		
 	</table>
 </body>
 </html>

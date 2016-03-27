@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.RedirectView;
 
 /**
  * untuk mengetes kenapa proses Insert di crud ga berjalan dengan baik=... 
@@ -28,8 +29,14 @@ public class InsertEmployeeController {
 	}	
 	
 	@RequestMapping(value="employee/insert" , method=RequestMethod.POST)
-	public String insertEmployee1(@Valid EmployeeEntity employee, ModelMap map){
+	public RedirectView insertEmployee1(@Valid EmployeeEntity employee){
 		insertDataDAO.insertEmployee(employee);
+//		map.addAttribute("employees", insertDataDAO.getAllEmployee()); 
+		return new RedirectView("/status", true ); 
+	}
+	
+	@RequestMapping(value="/status",  method=RequestMethod.GET )
+	public String getSuccessView(ModelMap map){
 		map.addAttribute("employees", insertDataDAO.getAllEmployee()); 
 		return "/insert-employee/status"; 
 	}
