@@ -11,9 +11,11 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "insert_employee", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "id"),
-        @UniqueConstraint(columnNames = "email") })
+@Table(name = "insert_employee", 
+		uniqueConstraints = {
+		@UniqueConstraint(columnNames = "id")
+	}
+)
 public class EmployeeEntity implements Serializable 
 {   
     private static final long serialVersionUID = -1798070786993154676L;

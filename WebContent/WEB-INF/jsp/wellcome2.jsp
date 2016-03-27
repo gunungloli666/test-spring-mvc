@@ -34,7 +34,7 @@
 
 <div class="container" style="min-height: 500px">
 
-	<div class="starter-template">
+	<div class="starter-template"   >
 		<h1>Search Form</h1>
 		<br>
 
